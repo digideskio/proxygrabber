@@ -6,7 +6,7 @@ It just save the output into a file
 
 #Installation and Usage
 
-Just ``npm install proxygrabber``
+Just ``npm install proxygrabber -g``
 
 usage: ``proxygrabber``
 
