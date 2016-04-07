@@ -1,12 +1,10 @@
 #! /usr/bin/env node
 
 var shell = require('shelljs');
-var program = require('commander');
-
 
 
 shell.exec('\
-	curl -s -connect-timeout 5 --retry 3 "http://www.sslproxies.org" | \
+	curl -s --connect-timeout 5 --retry 3 "http://www.sslproxies.org" | \
 	grep -E "[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}" | \
 	sed "s/<\\/td><td>/ /g" | \
 	sed "s/<tr><td>/ /g" | \
